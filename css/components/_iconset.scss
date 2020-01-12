@@ -1,0 +1,91 @@
+@font-face {
+  font-family: 'iconset';
+  src:  url('#{$icomoon-font-path}/iconset.eot?2nyna8');
+  src:  url('#{$icomoon-font-path}/iconset.eot?2nyna8#iefix') format('embedded-opentype'),
+    url('#{$icomoon-font-path}/iconset.ttf?2nyna8') format('truetype'),
+    url('#{$icomoon-font-path}/iconset.woff?2nyna8') format('woff'),
+    url('#{$icomoon-font-path}/iconset.svg?2nyna8#iconset') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="iconset-"], [class*=" iconset-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'iconset';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.iconset-telegram {
+  &:before {
+    content: $iconset-telegram; 
+  }
+}
+.iconset-google-plus {
+  &:before {
+    content: $iconset-google-plus; 
+  }
+}
+.iconset-search-plus {
+  &:before {
+    content: $iconset-search-plus; 
+  }
+}
+.iconset-search {
+  &:before {
+    content: $iconset-search; 
+  }
+}
+.iconset-line-chart {
+  &:before {
+    content: $iconset-line-chart; 
+  }
+}
+.iconset-graduation-cap {
+  &:before {
+    content: $iconset-graduation-cap; 
+  }
+}
+.iconset-mortar-board {
+  &:before {
+    content: $iconset-mortar-board; 
+  }
+}
+.iconset-bitcoin {
+  &:before {
+    content: $iconset-bitcoin; 
+  }
+}
+.iconset-envelope {
+  &:before {
+    content: $iconset-envelope; 
+  }
+}
+.iconset-twitter {
+  &:before {
+    content: $iconset-twitter; 
+  }
+}
+.iconset-pinterest {
+  &:before {
+    content: $iconset-pinterest; 
+  }
+}
+.iconset-facebook {
+  &:before {
+    content: $iconset-facebook; 
+  }
+}
+.iconset-facebook-f {
+  &:before {
+    content: $iconset-facebook-f; 
+  }
+}

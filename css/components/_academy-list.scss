@@ -1,0 +1,84 @@
+.online-academy-list {
+    padding: 0;
+    margin: -1.5%;
+    list-style: none;
+    text-align: center;
+    
+    @include bp-xs {
+        max-width: rem(400);
+        @include display-block-center;
+    }
+}
+
+.online-academy-list-item {
+    float: left;
+    width: 30.3%;
+    margin: 1.5%;
+    position: relative;
+    @include box-shadow(0, rem(5), rem(30), rgba(0,0,0,0.10));
+    
+    @include bp-xs {
+        width: 100%;
+        margin: 1.5% 0;
+    }
+}
+
+.online-academy-list-content {
+    
+    .inner-content {
+        padding: rem(25) rem(15);
+    }
+}
+
+.online-academy-thumb {
+    position: relative;
+    width: 100%;
+    padding-bottom: 100%;
+    overflow: hidden;
+    
+    img {
+        @include center-align-transform;
+        min-height: 100%;
+        max-width: 100%;
+        width: auto;
+        height: auto;
+    }
+}
+
+.online-academy-list-title {
+    color: $color-black-4;
+    padding: 0;
+    text-transform: none;
+    font-weight: $semibold;
+    font-size: rem(22);
+    margin-bottom: rem(17);
+    
+    span {
+        color: $color-black-4;
+    }
+    
+    &:after {
+        display: none;
+    }
+}
+
+.online-academy-list-exceprt {
+    color: $color-black-6;
+    font-size: rem(15);
+    margin-bottom: rem(20);
+    line-height: 1.8;
+}
+
+.online-academy-link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+    @include transition(all ease .3s);
+    
+    .no-touch &:hover {
+        @include bg-opacity($color-white, 0.45);
+    }
+}

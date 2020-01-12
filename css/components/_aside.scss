@@ -1,0 +1,139 @@
+.post-aside {
+    @include transition(ease 1s);
+    @include transform-translateY(0);
+    
+    &.fixed-me {
+        position: fixed;
+        top: 0;
+        @include transform-translateY(0.5%);
+    }
+    
+    &.active-absolute {
+        position: absolute;
+        bottom: 0;
+        top: auto;
+    }
+}
+
+.aside-widget, .widget_text {
+    margin-bottom: rem(35);
+}
+
+.sidebar-title, .widget-title {
+    padding: rem(12) rem(15) rem(12) rem(40);
+    position: relative;
+    display: block;
+    line-height: 1.2;
+    background-color: $color-grey-11;
+    color: $color-black-9;
+
+    &:before {
+        content: '';
+        height: rem(8);
+        left: rem(15);
+        position: absolute;
+        top: 50%;
+        width: rem(8);
+        background-color: $color-primary;
+        @include transform-translateY(-50%);
+    }
+}
+
+.widget_custom_html {
+    .sidebar-title, .widget-title {
+        background-color: $color-third;
+        font-weight: $bold;
+        color: $color-white;
+
+        &:before {
+            background-color: $color-white; 
+        }
+    }
+}
+
+.widget_recent_entries {
+
+    .sidebar-title, .widget-title {
+        font-weight: $bold;
+        text-transform: uppercase;
+        font-size: rem(14);
+    }
+
+    ul {
+        list-style: none;
+        margin: 0;
+        background-color: $color-grey-12;
+        padding: rem(15);
+
+        li {
+            margin-bottom: rem(8);
+            padding-bottom: rem(8);
+            border-bottom: rem(1) solid $color-grey-13; 
+
+            &:last-child {
+                border-bottom: none;
+                margin-bottom: 0;
+                padding-bottom: 0;
+            }
+        }
+
+        a {
+            color: $color-black-10;
+            font-size: rem(14);
+            line-height: 1;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+.tagcloud {
+    margin: -1%;
+}
+
+.tag-cloud-link {
+    display: inline-block;
+    padding: rem(8);
+    background-color: $color-grey-3;
+    color: $color-black-5;
+    font-size: rem(14) !important;
+    margin: 1%;
+    @include transition(background-color ease .3s, color ease .3s);
+
+    .no-touch &:hover {
+        background-color: $color-primary;
+        color: $color-white;
+    }
+}
+
+.page-aside {
+    p {
+        word-break: break-all;
+    }
+}
+
+.aside-title-big {
+    font-size: rem(18);
+    font-weight: $bold;
+    color: $color-grey-14;
+    margin-top: 0;
+    background-color: $color-blue-2;
+    padding: rem(17) rem(20);
+    display: block;
+    text-align: center;
+}
+
+.aside-content {
+    background-color: $color-grey-12;
+    padding: rem(20) rem(30);
+    @include no-float-targets;
+
+    p {
+        font-size: rem(17);
+        color: $color-black-10;
+        line-height: 1.4;
+        font-weight: $light;
+    }
+}

@@ -1,0 +1,48 @@
+.c-a-table {
+    margin-bottom: rem(50);
+    width: 100%;
+    text-align: left;
+    
+    th, td {
+        padding: rem(8);
+    }
+
+    th {
+        
+    }
+    
+    thead {
+        background-color: $color-primary;
+        color: $color-white;
+        
+        tr {
+
+        }
+    }
+
+    tbody {
+        tr {
+            &:nth-child(even) {
+                background-color: $color-grey-7;
+            }
+        }
+    }
+    
+    td {
+        font-size: 14px;
+            
+        &:first-child {
+            font-weight: $semibold;
+            width: 30%;
+        }
+        
+        p {
+            margin-bottom: 0;
+            line-height: 1;
+        }
+        
+        img {
+            max-width: rem(32);
+        }
+    }
+}

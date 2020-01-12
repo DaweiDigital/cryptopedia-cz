@@ -1,0 +1,93 @@
+.site-footer {
+    background-color: $color-black-2;
+    padding-top: rem(80);
+    float: left;
+    width: 100%;
+    
+    @include bp-xs {
+        padding-top: rem(30);
+    }
+}
+
+.footer-title {
+    font-size: rem(18);
+    color: $color-white;
+    font-weight: $medium;
+    letter-spacing: rem(1.5);
+    text-transform: uppercase;
+    margin-bottom: rem(15);
+    display: inline-block;
+}
+
+.footer-widget {
+    color: $color-white;
+    
+    .menu {
+        padding: 0;
+        list-style: none;
+        margin: 0;
+        
+        li {
+            position: relative;
+            padding-left: rem(20);
+            margin-top: rem(7);
+            
+            &:first-child {
+                margin-top: 0;
+            }
+            
+            &:before {
+                content:"";
+                position: absolute;
+                top: rem(7);
+                left: 0;
+                width: rem(7);
+                height: rem(7);
+                background-color: $color-primary;
+                @include border-radius(50%);
+            }
+        }
+        
+        a {
+            color: $color-white;
+            font-size: rem(14);
+            @include transition(color ease .3s);
+            
+            .no-touch &:hover {
+                color: $color-primary;
+            }
+        }
+    }
+    
+    p {
+        font-size: rem(13);
+        
+        @include bp-xs {
+            font-size: rem(12);
+        }
+    }
+}
+
+.footer-conditions {
+    padding: rem(20) 0;
+    background-color: $color-black-1;
+    color: $color-white;
+    font-size: rem(13);
+    margin-top: rem(80);
+    
+    @include bp-xs {
+        padding: rem(20) rem(15);
+        margin-top: rem(30);
+    }
+}
+
+.website-developers {
+    margin-bottom: 0;
+    
+    a {
+        color: $color-white;
+        margin-top: rem(10);
+        display: block;
+        text-decoration: underline;
+    }
+}

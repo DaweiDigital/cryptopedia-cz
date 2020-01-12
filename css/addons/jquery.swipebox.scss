@@ -1,0 +1,31 @@
+
+@import "../variables";
+
+// Disable scrollbar when swipebox is deployed
+.swipebox-html{
+  &,
+  & body{
+    overflow:hidden;
+  }
+}
+
+// Custom iconset
+#swipebox-slider .slide-loading {
+  background-image: url(../img/swipebox/loader.gif);
+}
+
+#swipebox-prev,
+#swipebox-next,
+#swipebox-close {
+  background-image: url(../img/swipebox/icons.png);
+}
+
+// Custom styles tweaks
+#swipebox-close{
+  right:0;
+}
+#swipebox-bottom-bar,
+#swipebox-top-bar{
+  opacity:1;
+  background:rgba(0, 0, 0, 0.6);
+}

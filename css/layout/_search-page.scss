@@ -1,0 +1,9 @@
+.search-results {
+    article {
+       margin-top: rem(65);
+       
+       &:first-of-type {
+           margin-top: 0;
+       }
+    }
+}

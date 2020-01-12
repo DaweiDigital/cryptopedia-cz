@@ -1,0 +1,77 @@
+.gallery {
+    @include no-float-targets;
+    margin: -1%;
+}
+
+.gallery-item {
+    float: left;
+    width: 31.333%;
+    margin: 1%;
+    
+    @include bp-xs-portrait {
+        width: 48%;
+    }
+}
+
+.gallery-icon {
+
+    a {
+        float: left;
+        width: 100%;
+        height: 0;
+        padding-bottom: 100%;
+        overflow: hidden;
+        position: relative;
+
+        &:after, &:before {
+            content:"";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        &:before {
+            content: $iconset-search-plus;
+            font-family: $font-iconset;
+            font-size: rem(45);
+            z-index: 5;
+            color: $color-white;
+            @include opacity(0);
+            @include transform-scale(0);
+            @include vertical-align-flex;
+            @include transition(transform 0.2s 0.1s ease-in, opacity 0.1s ease-in-out);
+        }
+
+        &:after {
+            opacity: 0;
+            overflow:visible;
+            border: 0 solid rgba(0,0,0,0.7);
+            @include transition(all ease-in-out .4s);
+        }
+
+        .no-touch &:hover {
+            &:before {
+                @include opacity(1);
+                @include transform-scale(1);
+                transition-delay:0.3s;
+                -webkit-transition-delay:0.3s;
+            }
+
+            &:after {
+                @include opacity(1);
+                border: rem(150) solid rgba(0,0,0,0.7);
+            }
+        }
+    }
+
+    img {
+        @include center-align-transform;
+        max-width: none;
+        max-height: 100%;
+        width: auto;
+        height: auto;
+    }
+}
+

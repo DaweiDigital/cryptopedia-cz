@@ -1,0 +1,18 @@
+.share-buttons {
+    border: rem(1) solid $color-grey-3;
+    border-left: 0;
+    border-right: 0;
+    padding: rem(30) 0;
+    margin: rem(30) 0;
+
+    h4, .h4 {
+        display: inline-block;
+        margin-right: rem(20);
+        vertical-align: top;
+        margin-top: rem(9);
+    }
+}
+
+.a2a_kit {
+    display: inline-block;
+}

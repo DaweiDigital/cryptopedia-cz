@@ -1,0 +1,62 @@
+.webiste-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 99;
+    padding: rem(29) 0;
+    @include transition(all ease .3s);
+
+    &.take-menu-start {
+        background-color: $color-black;
+        @include transform-translateY(-100%);
+    }
+
+    &.take-menu-start-between {
+        position: fixed;
+    }
+
+    &.take-menu{
+        @include transform-translateY(0);
+    }
+    
+    .responsive-menu-is-show & {
+        @include bp-xs {
+            z-index: auto;
+        }
+    }
+    
+    @include bp-sm {
+        padding: rem(12) 0;
+    }
+    
+    @include bp-xs {
+        position: static;
+        background-color: $color-black;
+        padding: rem(20) 0;
+    }
+}
+
+.website-brand {
+    @include bp-sm {
+        text-align: center;
+        margin-bottom: rem(7);
+    }
+}
+
+.website-name {
+    display: inline-block;
+    font-size: rem(15);
+    padding: rem(15) rem(9);
+    border: rem(3) solid $color-white;
+    color: $color-white;
+    text-transform: uppercase;
+    font-weight: $semibold;
+    line-height: 1;
+    letter-spacing: rem(2);
+    
+    @include bp-xs {
+        font-size: rem(12);
+        padding: rem(12) rem(9);
+    }
+}

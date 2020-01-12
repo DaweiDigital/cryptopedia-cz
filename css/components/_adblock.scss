@@ -1,0 +1,78 @@
+.adblock-content {
+    position: fixed;
+    left: 0;
+    top: rem(150);
+    z-index: 10;
+    display: none;
+    @include transform-translateX(-100%);
+    @include transition(all ease .3s);
+
+    &.show-me {
+        @include transform-translateX(0);
+    }
+
+    .aside-title {
+        padding: rem(15);
+        color: $color-white;
+        background-color: $color-red;
+        position: absolute;
+        top: rem(94);
+        width: rem(240);
+        right: rem(-146);
+        text-align: center;
+        cursor: pointer;
+        font-weight: $bold;
+        text-transform: uppercase;
+        letter-spacing: rem(3.5);
+        @include transform-rotate(-90deg);
+        @include transition(all ease .3s);
+    }
+
+    .title {
+        margin-bottom: rem(11);
+        font-weight: $bold;
+        display: block;
+    }
+
+    p {
+        font-size: rem(14);
+        line-height: 1.7;
+        color: $color-grey;
+        margin-bottom: 0;
+    }
+
+    .content {
+        width: rem(500);
+        padding: rem(23);
+        background-color: $color-white;
+        @include box-shadow(0, rem(5), rem(30), rgba(0,0,0,0.1));
+    }
+}
+
+.close-aside-content {
+    position: absolute;
+    top: rem(8);
+    right: rem(14);
+    cursor: pointer;
+    color: $color-grey-8;
+    font-size: rem(14);
+    @include transition(color ease .3s);
+    
+    .no-touch &:hover {
+        color: $color-primary;
+    }
+}
+
+.adblock-detect {
+    &.show-that {
+        @include bp-sm-high {
+            display: block;
+        }
+    }
+
+    .aside-title {
+        .no-touch &:hover {
+            background-color: $color-red-1;
+        }
+    }
+}

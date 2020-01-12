@@ -1,0 +1,55 @@
+.v-related-aside {
+    padding: rem(28) rem(30);
+    @include box-shadow(0,0,rem(20), rgba(4,5,5,0.15));
+}
+
+.v-related-pages {
+
+}
+
+.v-related-pages-list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+
+}
+
+.v-r-p-item {
+    border-bottom: rem(1) solid $color-grey-7;
+
+    &:first-child {
+        border-top: rem(1) solid $color-grey-7;
+    }
+
+    a {
+        padding: rem(16) 0 rem(16) rem(55);
+        display: block;
+        font-size: rem(17);
+        font-weight: $semibold;
+        color: $color-black-1;
+        position: relative;
+        @include transition(color ease .3s);
+
+        &:before {
+            content:"";
+            position: absolute;
+            top: rem(20);
+            left: 0;
+            width: rem(15);
+            height: rem(15);
+            border: rem(2) solid $color-primary;
+            border-left: none;
+            border-bottom: none;
+            @include transform-rotate(45deg);
+            @include transition(all .3s);
+        }
+
+        .no-touch &:hover {
+            color: $color-primary;
+
+            &:before {
+                left: rem(20);
+            }
+        }
+    }
+}

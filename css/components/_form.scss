@@ -1,0 +1,168 @@
+.input, .textarea {
+    float: left;
+    width: 100%;
+    border: rem(2) solid $color-grey-5;
+    padding: rem(9);
+    outline: 0;
+    line-height: 1;  
+    font-family: $font-primary;
+    font-weight: $regular;
+    font-size: rem(14);
+    color: $color-black-6;
+    appearance: none;
+    -webkit-appearance:none;
+    @include transition(border-color ease .3s);
+
+    .no-touch &:hover, &:focus {
+        border-color: shade($color-grey-5, 12%);
+    }
+
+    :-webkit-autofill {
+        -webkit-box-shadow: 0 0 0 rem(30) $color-white inset;
+    }
+
+    @include form-placeholder {
+        color: $color-black-6;
+    }
+}
+
+input {
+    &::-webkit-contacts-auto-fill-button {
+        visibility: hidden;
+        display: none !important;
+        pointer-events: none;
+        position: absolute;
+        right: 0;
+    }
+}
+
+.textarea {
+    resize: none;
+    height: rem(185);
+}
+
+select {
+    cursor: pointer;
+
+    &::-ms-expand {
+        display: none;
+    }
+}
+
+.input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 rem(30) $color-white inset;
+}
+
+.label {
+    float: left;
+    width: 100%;
+    margin-bottom: rem(14);
+
+    &:after {
+        content:"*";
+        display: inline-block;
+        color: pink;
+        margin-left: rem(8);
+    }
+}
+
+.form-web {
+
+}
+
+.form-group {
+    float: left;
+    width: 100%;
+    position: relative;
+    margin-bottom: rem(22);
+
+    &:last-of-type {
+        margin-bottom: 0;
+    }
+}
+
+#mc_embed_signup {
+    text-align: center;
+}
+
+.input-newsletter {
+    font-size: rem(14);
+    color: $color-grey-15;
+    background-color: $color-grey-11;
+    height: rem(41);
+    margin-bottom: rem(5);
+    padding: rem(5) rem(10);
+    display: inline-block;
+    vertical-align: top;
+    font-weight: $light;
+
+    @include form-placeholder {
+        color: $color-grey-15;
+    }
+}
+
+/* WORDPRESS ERROR MESSAGES STYLE
+span.wpcf7-not-valid-tip {
+    position: absolute;
+    top: rem(-23);
+    right: 0;
+    font-size: rem(14);
+
+    @include bp-xs-portrait {
+        font-size: rem(12);
+        top: rem(-22);
+    }
+}
+
+div.wpcf7-validation-errors, div.wpcf7-mail-sent-ng {
+    margin: 0;
+    text-align: center;
+    border: none;
+    font-size: rem(15);
+    color: $color-red;
+    padding: 0;
+
+    @include bp-sm-high {
+        @include horizontal-center-align-transform;
+        width: 50%;
+        bottom: rem(16);
+    }
+
+    @include bp-md {
+        bottom: rem(6);
+    }
+
+    @include bp-sm {
+        width: 39%;
+        bottom: rem(9);
+    }
+    
+    @include bp-xs {
+        margin-top: rem(20);
+    }
+}
+
+div.wpcf7 {
+    @include no-float-targets;
+    margin-top: rem(50);
+    
+    .ajax-loader {
+        @include horizontal-center-align-transform;
+        top: rem(-17);
+    }
+}
+
+.wpcf7-form {
+    float: left;
+    width: 100%;
+    position: relative;
+}
+
+.wpcf7-form-control-wrap {
+    @include no-float-targets;
+    display: block;
+}
+
+*/
+
+

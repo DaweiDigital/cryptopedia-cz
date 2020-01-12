@@ -1,0 +1,135 @@
+.coin-table {
+    width: 100%;
+
+    th, td {
+        padding: rem(6);
+        white-space: nowrap;
+        text-align: right;
+        
+        @include bp-sm {
+            padding: rem(3);
+        }
+        
+        @include bp-xs {
+            padding: rem(3);
+        }
+
+        &:first-child, &:nth-child(2) {
+            text-align: left;
+        }
+    }
+
+    tr  {
+
+    }
+
+    thead {
+        tr {
+
+        }
+    }
+
+    th {
+        font-size: rem(13);
+
+        @include bp-sm {
+            font-size: rem(10);
+        }
+    }
+
+    tbody {
+        tr {
+            border: rem(1) solid $color-grey-17;
+            border-left: none;
+            border-right: none;
+
+            &:nth-child(even) {
+                background-color: $color-grey-12;
+            }
+        }
+    }
+
+    td {
+        padding-top: rem(15);
+        padding-bottom: rem(15);
+        font-size: rem(15);
+        font-weight: $regular;
+        color: $color-blue-3;
+
+        @include bp-md {
+            font-size: rem(14);
+        }
+
+        @include bp-sm {
+            font-size: rem(10);
+            padding-top: rem(10);
+            padding-bottom: rem(10);
+        }
+        
+        @include bp-xs {
+            font-size: rem(12.5);
+            padding-top: rem(7);
+            padding-bottom: rem(7);
+        }
+
+        div {
+            display: inline-block;
+        }
+    }
+}
+
+.coin-table-price, .coin-table-change-day {
+    color: $color-green;
+
+    &+.pointer {
+        color: $color-green;
+    }
+
+    .negative-change & {
+        color: $color-red-2;
+
+        &+.pointer {
+            color: $color-red-2;
+        }
+    }
+}
+
+.coin-table-change-week {
+    color: $color-green;
+
+    &+.pointer {
+        color: $color-green;
+    }
+
+    &.negative-change {
+        color: $color-red-2;
+
+        &+.pointer {
+            color: $color-red-2;
+        }
+    }
+}
+
+.currency-gap {
+    display: inline-block;
+    margin: 0 rem(2.1);
+}
+
+.pointer {
+    display: inline-block;
+    margin-left: rem(3);
+}
+
+.coin-table-symbol {
+    font-size: rem(11);
+    color: $color-grey-18;
+    margin-left: rem(2);
+}
+
+.coin-table-market-cap {
+    color: $color-black-4;
+
+    &+.pointer {
+        color: $color-black-4;
+    }
+}

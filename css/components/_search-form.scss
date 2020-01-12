@@ -1,0 +1,29 @@
+.search-form {
+    @include no-float-targets;
+}
+
+.form-group {
+    
+}
+
+.input-search {
+    width: 73%;
+    
+    @include bp-sm {
+        width: 65%;
+    }
+    
+    @include bp-xs {
+        width: 100%;
+    }
+}
+
+.btn-search {
+    float: right;
+    margin-top: rem(2);
+    
+    @include bp-xs {
+        float: none;
+        margin-top: rem(10);
+    }
+}

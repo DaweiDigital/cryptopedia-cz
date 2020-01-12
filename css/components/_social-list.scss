@@ -1,0 +1,91 @@
+.social-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    &.background-yes {
+        background-color: $color-blue-2;
+        padding: 0 rem(45);
+        text-align: center;
+        
+        @include bp-sm {
+            padding: 0 rem(20);
+        }
+    }
+}
+
+.social-list-item {
+    display: inline-block;
+    margin-right: rem(7);
+
+    a {
+        width: rem(36);
+        height: rem(36);
+        background-color: $color-primary;
+        color: $color-white;
+        @include vertical-align-flex;
+        @include border-radius(50%);
+        @include transition(color ease .3s,background-color ease .3s);
+
+        .no-touch &:hover {
+            background-color: shade($color-primary, 50%);
+        }
+
+        .background-yes & {
+            background-color: transparent;
+            vertical-align: middle;
+            height: rem(55);
+            @include border-radius(0);
+
+            &:hover {
+                background-color: shade($color-blue-2, 50%);
+            }
+        }
+    }
+
+    a[href*="facebook"], a[href*="pinterest"], a[href*="twitter"], a[href*="plus.google"], a[href*="t.me"] {
+        position: relative;
+        font-size: 0;
+
+        &:before {
+            font-family: $font-iconset;
+            font-size: rem(16);
+        }
+
+        .background-yes & {
+            &:before {
+                font-size: rem(26);
+            }
+        }
+    }
+
+    a[href*="facebook"] {
+        &:before {
+            content: $iconset-facebook;
+        }
+    }
+
+    a[href*="pinterest"] {
+        &:before {
+            content: $iconset-pinterest;
+        }
+    }
+
+    a[href*="twitter"] {
+        &:before {
+            content: $iconset-twitter;
+        }
+    }
+
+    a[href*="plus.google"] {
+        &:before {
+            content: $iconset-google-plus;
+        } 
+    }
+
+    a[href*="t.me"] {
+        &:before {
+            content: $iconset-telegram;
+        } 
+    }
+}

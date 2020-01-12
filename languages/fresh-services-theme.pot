@@ -1,0 +1,157 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-12-19 13:18+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: 404.php:29
+msgid "Oops! That page can&rsquo;t be found."
+msgstr ""
+
+#: 404.php:39
+msgid ""
+"It looks like nothing was found at this location. Maybe try one of the links "
+"below or a search?"
+msgstr ""
+
+#: footer.php:30
+msgid "Všechna práva vyhrazena."
+msgstr ""
+
+#: functions.php:88
+msgid ""
+"Tento web používá k poskytování funkcí sociálních médií a analýze "
+"návštěvnosti soubory cookies. Používáním tohoto webu souhlasíte s ukládáním "
+"a používáním souborů cookies."
+msgstr ""
+
+#: functions.php:89
+msgid "Více informací"
+msgstr ""
+
+#: functions.php:90
+msgid "Rozumím"
+msgstr ""
+
+#: functions.php:92
+msgid "/prohlaseni-o-ochrane-osobnich-udaju/"
+msgstr ""
+
+#: functions.php:110
+msgid "Footer widget 1"
+msgstr ""
+
+#: functions.php:111 functions.php:122 functions.php:133 functions.php:143
+#: functions.php:153 functions.php:163
+msgid "This sidebar is located above the age logo."
+msgstr ""
+
+#: functions.php:121
+msgid "Footer widget 2"
+msgstr ""
+
+#: functions.php:132
+msgid "Footer widget 3"
+msgstr ""
+
+#: functions.php:142
+msgid "Footer widget 4"
+msgstr ""
+
+#: functions.php:152
+msgid "Sidebar"
+msgstr ""
+
+#: functions.php:162
+msgid "Sidebar u pojmů"
+msgstr ""
+
+#: search.php:12
+#, php-format
+msgid "Hledali jste: %s"
+msgstr ""
+
+#: searchform.php:3
+msgid "Search &hellip;"
+msgstr ""
+
+#: searchform.php:5
+msgid "Search"
+msgstr ""
+
+#: loop-templates/content-none.php:16
+msgid "Nebyly nalezeny žádné výsledky"
+msgstr ""
+
+#: loop-templates/content-none.php:24
+#, php-format
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+
+#: loop-templates/content-none.php:28
+msgid ""
+"Pro zadaný řetězec nebyl nalezen žádný výsledek. Zkuste hledat znovu pomocí "
+"jiných slov."
+msgstr ""
+
+#: loop-templates/content-none.php:33
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+
+#: loop-templates/content-page.php:16 loop-templates/content-single.php:37
+#: loop-templates/content.php:25 page-templates/homepage.php:118
+msgid "Pages:"
+msgstr ""
+
+#: page-templates/coin-analyse-detail.php:39
+msgid "Rychlý přehled"
+msgstr ""
+
+#: page-templates/coin-analyse-detail.php:45
+msgid "Aktuální hodnota"
+msgstr ""
+
+#: page-templates/coin-analyse-detail.php:58
+msgid "Označení"
+msgstr ""
+
+#: page-templates/coin-analyse-detail.php:66
+msgid "Ikona"
+msgstr ""
+
+#: page-templates/coin-analyse-detail.php:75
+msgid "Koupit lze na"
+msgstr ""
+
+#: page-templates/coin-analyse-detail.php:112
+msgid "Obchodní platoformy"
+msgstr ""
+
+#: page-templates/coin-analyse-detail.php:163
+#: page-templates/dictionary-detail.php:58
+msgid "Zpět na"
+msgstr ""
+
+#: page-templates/homepage.php:131
+msgid "/aktualne"
+msgstr ""
+
+#: page-templates/homepage.php:131
+msgid "Zobrazit aktuality"
+msgstr ""

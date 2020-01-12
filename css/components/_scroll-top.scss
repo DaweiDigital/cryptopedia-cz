@@ -1,0 +1,47 @@
+.scroll-top {
+    width: rem(50);
+    height: rem(50);
+    background-color: $color-primary;
+    color: $color-black;
+    position: fixed;
+    bottom: rem(50);
+    right: rem(50);
+    z-index: 10;
+    cursor: pointer;
+    @include transform-translateY(200%);
+    @include transition(all ease .3s);
+
+    &:before {
+        content:"";
+        position: absolute;
+        left: rem(18);
+        top: rem(20);
+        width: rem(15);
+        height: rem(15);
+        border: rem(2) solid $color-white;
+        border-bottom: none;
+        border-right: none;
+        @include transform-rotate(45deg);
+
+        @include bp-xs {
+            left: rem(11);
+            top: rem(13);
+        }
+    }
+
+    &:hover {
+        background-color: $color-black;
+        color: $color-white;
+    }
+
+    @include bp-xs {
+        right: rem(15);
+        bottom: rem(15);
+        width: rem(35);
+        height: rem(35);
+    }
+    
+    &.show-it {
+        @include transform-translateY(0);
+    }
+}

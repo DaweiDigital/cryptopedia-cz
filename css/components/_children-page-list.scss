@@ -1,0 +1,84 @@
+.children-page-list {
+    list-style: none;
+    padding: 0;
+    margin: rem(80) 0 0;
+    background-color: $color-white;
+    @include box-shadow(0,0,rem(20), rgba(4,5,5,.05));
+}
+
+.children-page-list-item {
+    padding: rem(40) rem(40) rem(40) rem(145);
+    border-top: rem(1) solid $color-grey-5;
+    position: relative;
+
+    &:first-child {
+        border-top: 0;
+    }
+    
+    @include bp-xs {
+        padding: rem(20);
+    }
+}
+
+.children-page-list-content {
+
+    .inner-content {
+
+    }
+}
+
+.sort-alphabet {
+    font-size: rem(110);
+    color: $color-grey-3;
+    position: absolute;
+    top: rem(16);
+    left: rem(33);
+    font-weight: $bold;
+    
+    @include bp-xs {
+        display: none;
+    }
+}
+
+.children-page-list-title {
+    margin-bottom: rem(30);
+    padding: 0;
+
+    &:after {
+        display: none;
+    }
+
+    a {
+        line-height: 1;
+        position: relative;
+        color: $color-black-1;
+
+        &:before {
+            content:"";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: rem(2);
+            background-color: $color-primary;
+            @include transition(all .3s);
+        }
+
+        .no-touch &:hover, &:focus {
+            text-decoration: none;
+
+            &:before {
+                width: 0;
+            }
+        }
+    }
+}
+
+.children-page-list-exceprt {
+    font-size: rem(18);
+    color: $color-grey;
+}
+
+.max-count-of-list {
+    margin-top: rem(16);
+}

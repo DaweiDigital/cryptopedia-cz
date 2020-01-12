@@ -1,0 +1,45 @@
+.bs-cta-block {
+    padding: rem(85) 0;
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: center;
+    
+    &:before {
+        content:"";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: $color-black;
+        @include opacity(.85);
+    }
+    
+    &.white-overlay {
+        &:before {
+            background-color: $color-white;
+        }
+    }
+    
+    h2 {
+        text-transform: uppercase;
+        font-size: rem(27);
+        font-weight: $bold;
+        margin-bottom: rem(35);
+        color: $color-white;
+        padding-bottom: 0;
+        
+        &:after {
+            display: none;
+        }
+    }
+    
+    .btn {
+        
+    }
+    
+    .container {
+        position: relative;
+        z-index: 2;
+    }
+}

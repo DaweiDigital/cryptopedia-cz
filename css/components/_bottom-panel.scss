@@ -1,0 +1,16 @@
+.bottom-panel {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 20;
+    width: 50%;
+    background-color: $color-primary;
+    padding: rem(25) rem(15);
+}
+
+.bottom-panel-title {
+    color: $color-white;
+    text-transform: uppercase;
+    font-weight: $semibold;
+    display: block;
+}

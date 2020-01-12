@@ -1,0 +1,353 @@
+.post-list {
+    @include no-float-targets;
+    margin: -1.16%;
+    list-style: none;
+    padding: 0;
+    display: flex;
+    display: -webkit-flex;
+    flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+
+    @include bp-xs {
+        max-width: rem(450);
+        @include display-block-center;
+    }
+
+    .post {
+        float: left;
+        width: 31%;
+        margin: 1.16%;
+        border: rem(1) solid $color-grey-1;
+        @include box-shadow(0, 0, rem(18), rgba(0,0,0,0.06));
+        @include transition(all ease .3s);
+
+        @include bp-sm {
+            width: 42.6%;
+        }
+
+        @include bp-xs {
+            width: 100%;
+            margin: 1% 0;
+        }
+    }
+}
+
+.btn-hidden {
+    .btn {
+        display: none;
+    }
+}
+
+.post-image {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding-bottom: 100%;
+
+    img {
+        @include center-align-transform;
+        width: auto;
+        height: auto;
+        max-height: 100%;
+    }
+}
+
+.post-header {
+    padding: rem(20) rem(15) 0;
+}
+
+.post-meta {
+
+    .posted-on {
+        font-size: 0;
+        display: inline-block;
+        margin-right: rem(13);
+        padding-right: rem(15);
+        position: relative;
+
+        a {
+            font-size: rem(14);
+            color: $color-grey-2;
+        }
+
+        .entry-date {
+            &+.updated {
+                display: none;
+            }
+        }
+
+        &:after {
+            content: "";
+            position: absolute;
+            top: rem(2);
+            right: 0;
+            width: rem(1);
+            height: rem(14);
+            background-color: $color-primary;
+        }
+    }
+
+    .byline {
+        font-size: rem(14);
+        color: $color-grey-2;
+    }
+
+    .author {
+
+    }
+
+    .url {
+        color: $color-grey-2;
+    }
+
+    a {
+        @include transition(color ease .3s);
+
+        .no-touch &:hover {
+            color: $color-primary;
+        }
+    }
+
+}
+
+.post-title {
+    font-size: rem(19);
+    font-weight: $bold;
+    line-height: 1.4;
+    margin-top: rem(17);
+    margin-bottom: rem(15);
+    color: $color-black-3;
+    padding: 0;
+    text-transform: none;
+
+    &:after {
+        display: none;
+    }
+
+    a {
+        color: $color-black-3;
+        @include transition(color ease .3s);
+
+        .no-touch &:hover {
+            color: $color-primary;
+
+            span {
+                color: $color-primary;
+            }
+        }
+
+        span {
+            color: $color-black-3;
+            @include transition(color ease .3s);
+        }
+    }
+
+    span {
+        color: $color-black-3;
+    }
+
+    .bs-post-detail & {
+        font-size: rem(22);
+        padding-bottom: 0;
+        text-transform: none;
+
+        &:after {
+            display: none;
+        }
+    }
+}
+
+.post-content {
+    font-size: rem(13);
+    color: $color-grey;
+    letter-spacing: rem(.5);
+    padding: 0 rem(15) rem(20);
+
+    .btn-wrap {
+        margin-top: rem(18);
+        display: block;
+    }
+
+    .bs-post-detail & {
+        padding: 0;
+        font-size: rem(15);
+    }
+}
+
+.post-thumb {
+    margin-bottom: rem(35);
+
+    img {
+        height: auto;
+        max-width: 100%;
+    }
+}
+
+.post-categories {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: inline-block;
+    position: relative;
+    padding-left: rem(15);
+    margin-left: rem(13);
+
+    &:before {
+        content:"";
+        position: absolute;
+        top: rem(3);
+        left: 0;
+        width: rem(1);
+        height: rem(14);
+        background-color: $color-primary;
+    }
+
+    li {
+        display: inline-block;
+        position: relative;
+        padding-left: rem(8);
+
+        &:before {
+            content: ",";
+            position: absolute;
+            left: rem(-3);
+            bottom: 0;
+            font-size: rem(21);
+        }
+
+        &:first-child {
+            padding-left: 0;
+
+            &:before {
+                display: none;
+            }
+        }
+    }
+
+    a {
+        font-size: rem(14);
+        color: $color-grey-2;
+    }
+}
+
+.post-navigation {
+    @include no-float-targets;
+
+    .screen-reader-text {
+        display: none;
+    }
+
+    .nav-links {
+
+        a {
+            font-size: rem(14);
+            text-align: center;
+            width: 100%;
+            color: $color-white;
+            background-color: $color-primary;
+            padding: rem(10) rem(18);
+            display: inline-block;
+            position: relative;
+            @include transition(color ease .3s, background-color ease .3s);
+
+            &:before {
+                content:"";
+                position: absolute;
+                top: rem(13);
+                width: rem(11);
+                height: rem(11);
+                border: rem(2) solid $color-white;
+                @include transform-rotate(45deg);
+            }
+
+            .no-touch &:hover {
+                background-color: $color-brown-1;
+            }
+        }
+    }
+
+    .nav-previous {
+        float: left;
+        width: 49%;
+        
+        @include bp-xs {
+            width: 100%;
+            margin-bottom: rem(16);
+        }
+
+        a {
+            padding-left: rem(50);
+
+            &:before {
+                left: rem(30);
+                border-top: none;
+                border-right: none;
+            }
+        }
+    }
+
+    .nav-next {
+        float: right;
+        width: 49%;
+        
+        @include bp-xs {
+            width: 100%;
+        }
+
+        a {
+            padding-right: rem(50);
+
+            &:before {
+                right: rem(30);
+                border-left: none;
+                border-bottom: none;
+            }
+        }
+    }
+}
+
+.post-tags {
+    padding: rem(11) rem(11) rem(20);
+    background-color: $color-grey-16;
+    text-align: center;
+    position: relative;
+    font-size: 0;
+
+    a {
+        font-size: rem(14);
+        font-weight: $bold;
+        text-transform: uppercase;
+        position: relative;
+        padding: 0 rem(2) 0 rem(15);
+        display: inline-block;
+        margin: 0 rem(5);
+        line-height: 2.5;
+        @include transition(all ease .3s);
+        
+        &:before {
+            content:"#";
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: rem(1);
+            color: $color-secondary;
+        }
+        
+        &:after {
+            content:"";
+            background-color: $color-yellow-1;
+            bottom: rem(2);
+            height: rem(3);
+            left: 0;
+            position: absolute;
+            width: 100%;
+            @include transition(all ease .3s);
+        }
+        
+        .no-touch &:hover {
+            &:after {
+                background-color: shade($color-yellow-1, 50%);
+            }
+        }
+    }
+}

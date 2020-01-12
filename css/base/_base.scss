@@ -1,0 +1,164 @@
+*, :after, :before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.bs-block {
+    float: left;
+    width: 100%;
+    padding: rem(30) 0;
+}
+
+.img {
+    @include bp-sm-high {
+        max-width: 100%;
+    }
+}
+
+.top-gap-little {
+    margin-top: rem(7);
+}
+
+.top-gap {
+    margin-top: rem(16);
+}
+
+.top-gap-medium {
+    margin-top: rem(32);
+} 
+
+.top-gap-large {
+    margin-top: rem(64);
+}
+
+.top-gap-sm {
+    @include bp-sm {
+        margin-top: rem(16);
+    }
+}
+
+.top-gap-sm-medium {
+    @include bp-sm {
+        margin-top: rem(32);
+    }
+}
+
+.top-gap-big-sm {
+    @include bp-sm {
+        margin-top: rem(64);
+    }
+}
+
+.top-gap-xs {
+    @include bp-xs {
+        margin-top: rem(16);
+    }
+
+}
+
+.top-gap-medium-xs {
+    @include bp-xs {
+        margin-top: rem(32);
+    }
+
+} 
+
+.top-gap-large-xs {
+    @include bp-xs {
+        margin-top: rem(64);
+    }
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-center-xs {
+    @include bp-xs {
+        text-align: center;
+    }
+}
+
+.vertical-align--flex {
+    @include vertical-align-flex();
+
+    @include bp-xs {
+        flex-wrap: wrap;
+        -webkit-flex-wrap: wrap;
+    }
+}
+
+.relative {
+    position: relative;
+}
+
+.static {
+    position: static;
+}
+
+.padding-top-none {
+    padding-top: 0;
+}
+
+.padding-bottom-none {
+    padding-bottom: 0;
+}
+
+.no-padding-left {
+    padding-left: 0;
+}
+.no-padding-right {
+    padding-right: 0;
+}
+
+.no-padding-xs {
+    @include bp-xs {
+        padding: 0;
+    }
+}
+
+.clear-left-sm {
+    @include bp-sm {
+        clear: left;
+    }
+}
+
+.flex-down {
+    align-self: flex-end;
+    -webkit-align-self: flex-end;
+}
+
+.flex-first-xs {
+    @include bp-xs {
+        order: 1;
+        -webkit-order: 1;
+    }
+}
+
+.flex-second-xs {
+    @include bp-xs {
+        order: 2;
+        -webkit-order: 2;
+    }
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $color-white;
+    @include opacity(.8);
+    display: none;
+    z-index: 99;
+
+    &.is-show {
+        display: block;
+    }
+}
+
+.full-width {
+    width: 100%;
+}

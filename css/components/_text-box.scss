@@ -1,0 +1,60 @@
+.text-box {
+
+    h3 {
+        color: $color-white;
+        font-size: rem(24);
+        font-weight: $bold;
+
+        @include bp-sm {
+            font-size: rem(20);
+        }
+    }
+
+    p {
+        color: $color-white;
+    }
+
+    &.next-step {
+        position: relative;
+
+        &:after {
+            content:"";
+            position: absolute;
+            top: rem(43);
+            right: rem(-95);
+            background-image: url(../img/arrow-to-next.png);
+            background-repeat: no-repeat;
+            background-position: center;
+            width: rem(158);
+            height: rem(17);
+            background-size: 100%;
+
+            @include bp-sm {
+                width: rem(120);
+                right: rem(-75);
+            }
+
+            @include bp-xs {
+                display: none;
+            }
+        }
+    }
+}
+
+.icon-box {
+    width: rem(100);
+    height: rem(100);
+    border: rem(5) solid $color-grey-9;
+    color: $color-third;
+    font-size: rem(48);
+    text-align: center;
+    display: inline-block;
+    @include border-radius(50%);
+    margin-bottom: rem(35);
+    position: relative;
+
+    .iconset {
+        @include center-align-transform;
+    }
+}
+
